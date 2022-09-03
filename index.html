@@ -3,10 +3,84 @@
 <head>
    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The web site of stfu</title>
-     
-    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
-</head>
+    <title> stfu</title>
+     </head>
+<style>
+.flip-card {
+margin: auto;
+width: 250px; /*change the sizing*/
+height: 250px; /*change the sizing*/
+perspective: 1000px;
+border-radius:10px;
+}
+
+.flip-card-inner {
+width: 100%;
+height: 100%;
+transition: transform 1.5s;
+transform-style: preserve-3d;
+transition-timing-function: cubic-bezier(.175, .885, .32, 1.275);
+}
+
+.flip-card:hover .flip-card-inner {
+transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+position: absolute;
+width: 100%;
+height: 100%;
+-webkit-backface-visibility: hidden;
+backface-visibility: hidden;
+}
+
+.flip-card-front {
+/*change the appearance of the front here*/
+background: linear-gradient(-180deg, #FFFFFF40 30%, #b8cef360 100%);
+backdrop-filter: blur(5px); /*delete if you don't want the frosted glass effect*/
+box-shadow:0px 0px 5px 1px #61616130;
+border-radius:10px;
+border:1px solid #f5f5f5;
+padding: 10px;
+color: #000;
+font-size: 0.9em;
+}
+
+.flip-card-back {
+/*change the appearance of the back here*/
+background: linear-gradient(-180deg, #FFFFFF40 30%, #b8cef360 100%);
+backdrop-filter: blur(5px); /*delete if you don't want the frosted glass effect*/
+box-shadow:0px 0px 5px 1px #61616130;
+transform: rotateY(180deg);
+border-radius:10px;
+border:1px solid #f5f5f5;
+padding: 10px;
+color: #000;
+font-size: 0.9em;
+}
+
+h1 {
+background: -webkit-linear-gradient(-90deg, #ffffff 0%, #b8cef3 70%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+color: #FFDBF1;
+font-size: 2.3em;
+font-weight: 900;
+line-height: 1.2em;
+-webkit-filter: drop-shadow(0px 0px 1px #919191);
+}
+
+h2 {
+background: -webkit-linear-gradient(-90deg, #ffffff 0%, #B8BAF3 70%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+font-size: 1.4em;
+font-weight: 600;
+line-height: 1.2em;
+-webkit-filter: drop-shadow(0px 0px 1px #919191);
+}
+</style>
+
 <body>
 <div class="flip-card">
 <div class="flip-card-inner">
@@ -14,12 +88,12 @@
 <h1> FRONT </h1>
 <p>hello</p>
 </div>
- 
+
 <div class="flip-card-back">
 <h2> BACK </h2>
 <p>hello</p>
 </div>
- 
+
 </div>
 </div>
 </body>
